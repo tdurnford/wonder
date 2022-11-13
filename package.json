@@ -2,7 +2,7 @@
   "name": "wonder",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://tdurnford.github.io/wordl/",
+  "homepage": "https://tdurnford.github.io/wonder/",
   "dependencies": {
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
