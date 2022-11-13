@@ -72,9 +72,8 @@ function App() {
         <div>
           <a href="tel:+13038080256">(303)808-0256</a>
         </div>
-        <Link href="https://www.dropbox.com/s/vvwp4aoxg5wp2mt/joe.vfc?dl=1">
+        <Link href="https://www.dropbox.com/s/wui7fs4bd3qre23/joe_durnford.vcf?dl=1">
           <Button
-            href="https://www.dropbox.com/s/vvwp4aoxg5wp2mt/joe.vfc?dl=1"
             icon={<ArrowDownload24Regular />}
           />
         </Link>
