@@ -1,12 +1,11 @@
 import React from "react";
 import styled from "@emotion/styled";
 import {
-  Body1,
   Button,
   Divider,
   Link,
-  Subtitle1,
-  Title3,
+  Text,
+  tokens,
 } from "@fluentui/react-components";
 import { ArrowDownload24Regular } from "@fluentui/react-icons";
 
@@ -22,25 +21,25 @@ const Container = styled.div({
 });
 
 const BannerContainer = styled.div({
-  position: 'relative',
-  marginBottom: 36
+  position: "relative",
+  marginBottom: 36,
 });
 
 const ContactContainer = styled.div({
-  padding: 8
-})
+  padding: 8,
+});
 
 const Banner = styled.img({
-  width: '100%'
+  width: "100%",
 });
 const HeadShot = styled.img({
-  position: 'absolute',
+  position: "absolute",
   left: 12,
   bottom: -36,
-  borderRadius: '50%',
-  border: 'solid 4px white',
+  borderRadius: "50%",
+  border: `solid 4px ${tokens.colorNeutralBackground1}`,
   height: 100,
-  width: 100
+  width: 100,
 });
 
 function App() {
@@ -52,16 +51,25 @@ function App() {
       </BannerContainer>
       <ContactContainer>
         <div>
-          <Title3>Joe Durnford</Title3> <Divider appearance="strong" style={{ display: 'inline-block' }} vertical /> <Body1>Chairman</Body1>
+          <Text weight="semibold" size={400}>
+            Joe Durnford
+          </Text>
+          <Divider
+            appearance="strong"
+            style={{ display: "inline-block", margin: '0 4px 0 4px' }}
+            vertical
+          />
+          <Text weight="regular" size={400}>
+            Chairman
+          </Text>
         </div>
         <div>
-          <Subtitle1>JD Merit & Company</Subtitle1>
+          <Text weight="medium" size={300}>
+            JD Merit & Company
+          </Text>
         </div>
+
         <div>
-          
-        </div>
-        <div>
-          {/* <Call24Filled /> */}
           <a href="tel:+13038080256">(303)808-0256</a>
         </div>
         <Link href="https://www.dropbox.com/s/vvwp4aoxg5wp2mt/joe.vfc?dl=1">
