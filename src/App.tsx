@@ -1,9 +1,7 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { Subtitle1, Subtitle2, Title3 } from '@fluentui/react-components';
-import { Call24Filled } from '@fluentui/react-icons';
-
-import './App.css';
+import { Button, Subtitle1, Subtitle2, Title3 } from '@fluentui/react-components';
+import { ArrowDownload24Regular } from '@fluentui/react-icons';
 
 import HeadShotImage from './resources/images/headshot.jpg';
 
@@ -24,6 +22,9 @@ function App() {
     <Container>
       <HeadShot alt="" src={HeadShotImage} />
       <div>
+        <div>
+          <Button icon={<ArrowDownload24Regular />} shape="circular" />
+        </div>
         <div>
           <Title3>Joe Durnford</Title3>
         </div>
