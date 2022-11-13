@@ -1,14 +1,22 @@
-import React, { useState } from 'react';
-import { chunk } from 'lodash';
+import React from 'react';
+import VCard from 'vcard-creator'
+
 import './App.css';
 
-import { words } from './words';
+const contactCard = new VCard();
+
+contactCard.addName('Durnford', 'Joe');
+
+contactCard.getOutput();
+
+console.log(encodeURIComponent(contactCard.getOutput()));
+console.log(contactCard.buildVCard());
 
 function App() {
 
   return (
     <div>
-     <a href=""></a>
+     <a href="https://www.dropbox.com/s/vvwp4aoxg5wp2mt/joe.vfc?dl=1">Contact</a>
     </div>
   );
 }
