@@ -1,0 +1,12 @@
+BEGIN:VCARD
+VERSION:3.0
+FN;CHARSET=UTF-8:Joe Durnford
+N;CHARSET=UTF-8:Durnford;Joe;;;
+EMAIL;CHARSET=UTF-8;type=WORK,INTERNET:joe.durnford@jdford.com
+TEL;TYPE=CELL:3038080256
+TITLE;CHARSET=UTF-8:Chairman
+ORG;CHARSET=UTF-8:JD Merit & Company
+URL;type=WORK;CHARSET=UTF-8:https://jdmerit.com/
+X-SOCIALPROFILE;TYPE=linkedin:https://www.linkedin.com/in/josephdurnford/
+REV:2022-11-13T19:27:59.905Z
+END:VCARD
