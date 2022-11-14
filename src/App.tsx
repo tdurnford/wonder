@@ -1,11 +1,6 @@
 import React, { useCallback } from "react";
 import styled from "@emotion/styled";
-import {
-  Button,
-  Divider,
-  Text,
-  tokens,
-} from "@fluentui/react-components";
+import { Button, Divider, Text, tokens } from "@fluentui/react-components";
 import { ArrowDownload24Regular } from "@fluentui/react-icons";
 
 import HeadShotImage from "./resources/images/headshot.jpg";
@@ -829,12 +824,12 @@ PHOTO;ENCODING=b;TYPE=JPEG:/9j/4AAQSkZJRgABAQAASABIAAD/4QBYRXhpZgAATU0AKgAA
  V8HKbue9FkRO38KD0GQfr1z9ajBLdMcjv6Upcg4Hv3qedl3P/9k=
 END:VCARD
 
-`
+`;
 
 const downloadVcf = (data: string) => {
-  document.location.href = 'data:text/x-vcard;charset=utf-8,' + encodeURIComponent(data);
-}
-
+  document.location.href =
+    "data:text/x-vcard;charset=utf-8," + encodeURIComponent(data);
+};
 
 const Container = styled.div({
   display: "flex",
@@ -867,14 +862,17 @@ const HeadShot = styled.img({
 });
 
 const ContactLink = styled.a({
-  color: 'black',
-  textDecoration: 'none'
-})
+  color: "black",
+  textDecoration: "none",
+});
+
+const ContactLinkContainer = styled.div({
+  margin: "8px 0 8px 0",
+});
 
 function App() {
-
   const handleDownload = useCallback(() => {
-    downloadVcf(vcf)
+    downloadVcf(vcf);
   }, []);
 
   return (
@@ -890,7 +888,7 @@ function App() {
           </Text>
           <Divider
             appearance="strong"
-            style={{ display: "inline-block", margin: '0 4px 0 4px' }}
+            style={{ display: "inline-block", margin: "0 4px 0 4px" }}
             vertical
           />
           <Text weight="regular" size={400}>
@@ -903,16 +901,22 @@ function App() {
           </Text>
         </div>
 
-        <div>
-          <ContactLink href="tel:+13038080256">(303)808-0256</ContactLink>
-        </div>
-        <div>
-          <ContactLink href="mailto:joe.durnford@jdmerit.com">joe.durnford@jdmerit.com</ContactLink>
-        </div>
-          <Button
-            icon={<ArrowDownload24Regular />}
-            onClick={handleDownload}
-          />
+        <ContactLinkContainer>
+          <div>
+            <ContactLink href="tel:+13038080256">(303)808-0256</ContactLink>
+          </div>
+          <div>
+            <ContactLink href="mailto:joe.durnford@jdmerit.com">
+              joe.durnford@jdmerit.com
+            </ContactLink>
+          </div>
+          <div>
+            <ContactLink href="https://www.jdmerit.com" target="_blank" rel="noreferrer noopener">
+              www.jdmerit.com
+            </ContactLink>
+          </div>
+        </ContactLinkContainer>
+        <Button icon={<ArrowDownload24Regular />} onClick={handleDownload} />
       </ContactContainer>
     </Container>
   );
